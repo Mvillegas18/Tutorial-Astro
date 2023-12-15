@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
 import '../styles/global.css';
 
 const create = true;
@@ -34,9 +37,7 @@ const colorBlue = '#f87171';
 	</head>
 
 	<body>
-		<a href='/'>Inicio</a>
-		<a href='/about/'>Sobre mí</a>
-		<a href='/blog/'>Go to blogs</a>
+		<Header />
 
 		<h1>{pageTitle}</h1>
 		{
@@ -52,5 +53,10 @@ const colorBlue = '#f87171';
 			nihil amet pariatur similique ipsam, velit quisquam ab voluptates veniam
 			eligendi.
 		</p>
+		<Footer />
+
+		<script>
+			import '../scripts/menu.js';
+		</script>
 	</body>
 </html>
