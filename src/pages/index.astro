@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = 'Pagina de inicio';
 ---
 
 <html lang='en'>
@@ -18,14 +18,14 @@
 			name='generator'
 			content={Astro.generator}
 		/>
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 
 	<body>
 		<a href='/'>Inicio</a>
 		<a href='/about/'>Sobre mí</a>
-		<a href='/blog/'>Ir a los blogs</a>
+		<a href='/blog/'>Go to blogs</a>
 
-		<h1>Mi sitio con Astro</h1>
+		<h1>{pageTitle}</h1>
 	</body>
 </html>

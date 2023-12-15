@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = 'Mi blog de astro aprendizaje';
 ---
 
 <html lang='en'>
@@ -18,15 +18,21 @@
 			name='generator'
 			content={Astro.generator}
 		/>
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 
 	<body>
 		<a href='/'>Inicio</a>
 		<a href='/about'>Sobre mí</a>
-		<a href='/blog'>Ir a los blogs</a>
+		<a href='/blog'>Blog</a>
 
-		<h1>Mi blog de astro aprendizaje</h1>
+		<h1>{pageTitle}</h1>
 		<p>Aqui es donde publicare sobre mi viaje de aprendizaje con astro</p>
+
+		<ul>
+			<li><a href='/posts/post-1'>Publicacion 1</a></li>
+			<li><a href='/posts/post-2'>Publicacion 2</a></li>
+			<li><a href='/posts/post-3'>Publicacion 3</a></li>
+		</ul>
 	</body>
 </html>
