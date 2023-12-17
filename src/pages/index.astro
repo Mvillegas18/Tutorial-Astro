@@ -1,62 +1,21 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-import '../styles/global.css';
-
+const pageTitle = 'Página de inicio';
 const create = true;
-const pageTitle = 'Pagina de inicio';
-
-const fontWeight = 'bold';
-const colorBlue = '#f87171';
 ---
 
-<html lang='es'>
-	<head>
-		<meta charset='utf-8' />
-		<link
-			rel='icon'
-			type='image/svg+xml'
-			href='/favicon.svg'
-		/>
-		<meta
-			name='viewport'
-			content='width=device-width'
-		/>
-		<meta
-			name='generator'
-			content={Astro.generator}
-		/>
-		<title>{pageTitle}</title>
-		<style define:vars={{ fontWeight, colorBlue }}>
-			.createBy {
-				font-weight: var(--fontWeight);
-				color: var(--colorBlue);
-			}
-		</style>
-	</head>
-
-	<body>
-		<Header />
-
-		<h1>{pageTitle}</h1>
-		{
-			create ? (
-				<p class='createBy'>Pagina creada por Miguel Angel Villegas</p>
-			) : (
-				<p>Esta pagina ha sido creada por varias personas</p>
-			)
-		}
-		<p>
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-			mollitia odio dolorum facere. Placeat praesentium vitae sunt facere odio
-			nihil amet pariatur similique ipsam, velit quisquam ab voluptates veniam
-			eligendi.
-		</p>
-		<Footer />
-
-		<script>
-			import '../scripts/menu.js';
-		</script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	{
+		create ? (
+			<p class='createBy'>Pagina creada por Miguel Angel Villegas</p>
+		) : (
+			<p>Esta pagina ha sido creada por varias personas</p>
+		)
+	}
+	<p>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia
+		odio dolorum facere. Placeat praesentium vitae sunt facere odio nihil amet
+		pariatur similique ipsam, velit quisquam ab voluptates veniam eligendi.
+	</p>
+</BaseLayout>

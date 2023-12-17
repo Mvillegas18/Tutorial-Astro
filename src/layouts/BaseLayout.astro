@@ -1,0 +1,59 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+import '../styles/global.css';
+
+const { pageTitle } = Astro.props;
+
+const fontWeight = 'bold';
+const colorBlue = '#f87171';
+const colorTitle = '#0369a1';
+---
+
+<html lang='es'>
+	<head>
+		<meta charset='utf-8' />
+		<link
+			rel='icon'
+			type='image/svg+xml'
+			href='/favicon.svg'
+		/>
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<meta
+			name='generator'
+			content={Astro.generator}
+		/>
+		<title>{pageTitle}</title>
+		<style define:vars={{ fontWeight, colorBlue, colorTitle }}>
+			.createBy {
+				font-weight: var(--fontWeight);
+				color: var(--colorBlue);
+			}
+			h1 {
+				color: var(--colorTitle);
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+
+		<h1>{pageTitle}</h1>
+		<slot />
+
+		<Footer />
+		<import
+			'..scripts
+			menu.js';
+			import
+			'..
+			scripts
+			menu.js';
+			script>
+		</import>
+	</body>
+</html>
