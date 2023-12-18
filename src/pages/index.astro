@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting.jsx';
 
 const pageTitle = 'Página de inicio';
 const create = true;
@@ -13,6 +14,19 @@ const create = true;
 			<p>Esta pagina ha sido creada por varias personas</p>
 		)
 	}
+
+	<Greeting
+		messages={[
+			'Hola',
+			'Buenos días',
+			'Buena tarde',
+			'Buenas noches',
+			'¿Cómo estás?',
+			'Saludos',
+		]}
+		client:load
+	/>
+
 	<p>
 		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis mollitia
 		odio dolorum facere. Placeat praesentium vitae sunt facere odio nihil amet
